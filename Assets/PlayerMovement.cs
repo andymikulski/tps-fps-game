@@ -14,8 +14,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		float shiftMultiplier = Input.GetKey (KeyCode.LeftShift) ? 2f : 1f;
+
+		Debug.Log ("wtf " + Input.GetKey (KeyCode.LeftShift));
+
 		float x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-		float z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+		float z = Input.GetAxis("Vertical") * Time.deltaTime * (WalkSpeed * shiftMultiplier);
 
 
 //		if (Input.GetKey (KeyCode.W)) {

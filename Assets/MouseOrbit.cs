@@ -1,38 +1,87 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
 public class MouseOrbit : MonoBehaviour {
-	public Camera camera;
-	public GameObject cameraGroup;
+
 	public Transform target;
+	public float distance = 5.0f;
+	public float xSpeed = 120.0f;
+	public float ySpeed = 120.0f;
 
-	private float vertical;
-	private float horiz;
-	private float ySpeed = 4.0f;
-	private float xSpeed = 4.0f;
+	public float yMinLimit = 9f;
+	public float yMaxLimit = 80f;
 
-	private Vector3 offset;
+	public float distanceMin = .5f;
+	public float distanceMax = 15f;
 
-	void Start ()
+	public float minCamDistance = 2f;
+
+	public float HeightAdjustment = 10f;
+
+	private Rigidbody rigidbody;
+
+	float x = 0.0f;
+	float y = 0.0f;
+
+	// Use this for initialization
+	void Start () 
 	{
-		offset = camera.transform.position - gameObject.transform.position;
-		vertical = transform.eulerAngles.x;
-		horiz = transform.eulerAngles.y;
+		Vector3 angles = transform.eulerAngles;
+		x = angles.y;
+		y = angles.x;
+
+		rigidbody = GetComponent<Rigidbody>();
+
+		// Make the rigid body not change rotation
+		if (rigidbody != null)
+		{
+			rigidbody.freezeRotation = true;
+		}
 	}
 
-	void Update ()
+	void LateUpdate () 
 	{
-		Cursor.lockState = CursorLockMode.Locked;
+		if (target) 
+		{
+			x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
+			y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+			y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-		float mouseVertical = Input.GetAxis ("Mouse Y");
-		float mouseHorizontal = Input.GetAxis ("Mouse X") * -1f;
+			Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-		// horizontal axis actually rotates around character
-		cameraGroup.transform.RotateAround (target.transform.position, Vector3.down, mouseHorizontal * xSpeed);
+			distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*5, distanceMin, distanceMax);
 
-		// vert rotates the camera at its actual axis
-		vertical = (vertical - ySpeed * mouseVertical) % 360f;
-		vertical = Mathf.Clamp(vertical, -30, 60);
-		camera.transform.localRotation = Quaternion.AngleAxis (vertical, Vector3.right);
+			Vector3 heightPadding = Vector3.up * HeightAdjustment;
+
+			RaycastHit hit;
+			Debug.DrawLine (target.position, transform.position - heightPadding, Color.red);
+
+			Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+			Vector3 position = rotation * negDistance + target.position;
+
+			transform.rotation = rotation;
+			transform.position = position + heightPadding;
+
+			if (Physics.Linecast (target.position, transform.position - heightPadding, out hit)) 
+			{
+				if (hasEnvironmentTag(hit.collider.gameObject)) {
+					transform.position = hit.point + heightPadding;
+				}
+			}
+		}
+	}
+
+	bool hasEnvironmentTag(GameObject target) {
+		return target.CompareTag ("Environment") || (target.transform.parent && target.transform.parent.CompareTag ("Environment"));
+	}
+
+	public static float ClampAngle(float angle, float min, float max)
+	{
+		if (angle < -360F)
+			angle += 360F;
+		if (angle > 360F)
+			angle -= 360F;
+		return Mathf.Clamp(angle, min, max);
 	}
 }

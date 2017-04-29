@@ -113,6 +113,7 @@
      <Compile Include="Assets\Scripts\AI\GOAP\GoapAgent.cs" />
      <Compile Include="Assets\Scripts\AI\GOAP\GoapPlanner.cs" />
      <Compile Include="Assets\Scripts\AI\GOAP\IGoap.cs" />
+     <Compile Include="Assets\Scripts\Camera Scripts\MouseOrbit.cs" />
      <Compile Include="Assets\Scripts\GameData\Actions\ChopFirewoodAction.cs" />
      <Compile Include="Assets\Scripts\GameData\Actions\ChopTreeAction.cs" />
      <Compile Include="Assets\Scripts\GameData\Actions\DropOffFirewoodAction.cs" />
