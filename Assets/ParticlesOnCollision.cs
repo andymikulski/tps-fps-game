@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ParticlesOnCollision : MonoBehaviour {
@@ -10,13 +11,7 @@ public class ParticlesOnCollision : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		if (Mathf.Abs(collision.relativeVelocity.magnitude) > RequiredStrength) {
-			bool isIgnoredTag = false;
-			foreach (string ignoreTag in TagsToIgnore)
-			{
-				isIgnoredTag = isIgnoredTag || collision.collider.gameObject.tag.Contains(ignoreTag);
-			}
-
-			if (isIgnoredTag) {
+			if (TagsToIgnore.Any (collision.collider.gameObject.tag.Contains)) {
 				return;
 			}
 
