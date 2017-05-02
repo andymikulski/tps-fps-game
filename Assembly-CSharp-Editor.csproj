@@ -47,6 +47,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\ChangeChildTags.cs" />
+     <Compile Include="Assets\Editor\GroupCommand.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\AboutNavMeshEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\CreateNavMeshManager.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\CreatePortalManager.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\NavMeshLinkVisualizerEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\NavMeshManagerEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\NavMeshObjectEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\PortalManagerEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\PortalObjectEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\Editor\ReviewWindowEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -81,6 +96,8 @@
      <Compile Include="Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+     <Compile Include="Assets\PostProcessing\Utilities\Editor\FocusPullerEditor.cs" />
+     <Compile Include="Assets\PostProcessing\Utilities\Editor\PostProcessingControllerEditor.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
@@ -133,6 +150,7 @@
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\NavMeshExtension\Changelog.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
@@ -150,6 +168,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\SimplePeople\Changelog.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
@@ -213,6 +232,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\NavMeshExtension\README.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />

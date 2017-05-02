@@ -51,7 +51,23 @@
      <Compile Include="Assets\DebugDrawingExtension\DebugExtension.cs" />
      <Compile Include="Assets\DebugDrawingExtension\Example\Example.cs" />
      <Compile Include="Assets\FollowOnAxes.cs" />
+     <Compile Include="Assets\Inventory.cs" />
+     <Compile Include="Assets\InventoryItem.cs" />
+     <Compile Include="Assets\KillAfterDelay.cs" />
      <Compile Include="Assets\MouseOrbit.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\AgentAnimator.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\AgentController.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshLinkVisualizer.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshManager.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\NavMeshObject.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\PortalManager.cs" />
+     <Compile Include="Assets\NavMeshExtension\Scripts\PortalObject.cs" />
+     <Compile Include="Assets\ParticlesOnCollision.cs" />
+     <Compile Include="Assets\PickupFloatSpin.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\PlayerShoot.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
@@ -99,6 +115,8 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\PostProcessing\Utilities\FocusPuller.cs" />
+     <Compile Include="Assets\PostProcessing\Utilities\PostProcessingController.cs" />
      <Compile Include="Assets\RPGPackFree\Scripts\BowString.cs" />
      <Compile Include="Assets\RPGPackFree\Scripts\OpenChest.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
@@ -194,6 +212,7 @@
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\NavMeshExtension\Changelog.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
@@ -211,6 +230,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\SimplePeople\Changelog.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
@@ -274,6 +294,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\NavMeshExtension\README.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
