@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryItem {
-	public string name = "Item";
+public class InventoryItem : MonoBehaviour {
+	new public string name = "Item";
 	public float quantity = 0;
 
-	public InventoryItem(string cName, float cQuantity) {
-		this.name = cName;
-		this.quantity = cQuantity;
+	public InventoryItem(InventoryItem item) {
+		name = item.name;
+		quantity = item.quantity;
+	}
+
+	public InventoryItem(InventoryItem item, float count) {
+		name = item.name;
+		quantity = count;
 	}
 }

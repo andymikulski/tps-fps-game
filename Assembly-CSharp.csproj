@@ -159,6 +159,8 @@
      <Compile Include="Assets\Scripts\GameData\ToolComponent.cs" />
      <Compile Include="Assets\Scripts\GameData\TreeComponent.cs" />
      <Compile Include="Assets\SpawnObject.cs" />
+     <Compile Include="Assets\TriggerDialog.cs" />
+     <Compile Include="Assets\TypingText.cs" />
      <Compile Include="Assets\UpdateGI.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

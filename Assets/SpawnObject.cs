@@ -14,7 +14,7 @@ public class SpawnObject : MonoBehaviour {
 		newObj.transform.localScale = Vector3.one / (Random.Range (-15f, 15f) + 1f);
 		newObj.transform.position = Random.insideUnitSphere * 25f;
 
-		Rigidbody rb = newObj.AddComponent<Rigidbody> ();
+		newObj.AddComponent<Rigidbody> ();
 		SphereCollider collider = newObj.GetComponent<SphereCollider> ();
 
 		collider.sharedMaterial = physMaterial;

@@ -15,7 +15,7 @@ public class MouseOrbitZoom : MonoBehaviour {
     public float distanceMin = 8f;
     public float distanceMax = 15f;
  
-    private Rigidbody rigidbody;
+    private Rigidbody rb;
  
     float x = 0.0f;
     float y = 0.0f;
@@ -27,12 +27,12 @@ public class MouseOrbitZoom : MonoBehaviour {
         x = angles.y;
         y = angles.x;
  
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
  
         // Make the rigid body not change rotation
-        if (rigidbody != null)
+        if (rb != null)
         {
-            rigidbody.freezeRotation = true;
+            rb.freezeRotation = true;
         }
     }
  
